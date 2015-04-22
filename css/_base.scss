@@ -1,0 +1,169 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  @include text-rendering;
+}
+
+::selection {
+  background: $color-red;
+  color: #fff;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: $sans-serif;
+  background-color: #ffffff;
+  color: $grey-dk;
+  @extend %cf;
+}
+
+p {
+  font-family: $serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 15px 0 25px 0;
+}
+
+a {
+  color: $color-red;
+  text-decoration: none;
+  @include all-transition(0.3s);
+  &:hover {
+    text-decoration: underline;
+    color: darken($color-red, 5%);
+  }
+}
+
+h1, 
+h2, 
+h3, 
+h4,
+.h1,
+.h2,
+.h3,
+.h4 {
+  color: $color-main;
+  font-weight: 900;
+}
+
+h1,
+.h1 {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+h2,
+.h2 {
+  font-size: 1.625rem;
+  line-height: 1.1;
+}
+
+h3,
+.h3 {
+  font-size: 1.1rem;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+.small {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 5px 0 15px 0;
+}
+
+.large {
+  @extend .h2;
+}
+
+@include media-query(medium) {
+  h1,
+  .h1 {
+    font-size: 2.25rem;
+    line-height: 1.125;
+  }
+  h2,
+  .h2 {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+  h3,
+  .h3 {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+  .small {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+@include media-query(large) {
+  h1,
+  .h1 {
+    font-size: 3rem;
+    line-height: 1.05;
+  }
+  h2,
+  .h2 {
+    font-size: 2.25rem;
+  }
+  h3,
+  .h3 {
+    font-size: 1.75rem;
+  }
+  p {
+    font-size: 1.2rem;
+    line-height: 1.55;
+  }
+}
+
+pre, code {
+  font-family: 'consolas', 'menlo', courier, monospace, sans-serif;
+  font-weight: 500;
+  @include border-radius(3px);
+  background: lighten($grey-lt, 7%);
+}
+
+pre {
+  border: 1px solid darken($grey-lt, 5%);
+  padding: 10px;
+}
+
+p code {
+  padding: 2px 5px 0;
+  color: $color-blue;
+  border: 1px solid darken($grey-lt, 5%);
+}
+
+img {
+  max-width: 100%;
+}
+
+.logo {
+  display: inline-block;
+  width: 93px;
+  height: 96px;
+  padding: 20px;
+  margin-left: -20px;
+  @include all-transition(0.6s);
+  &:hover {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  svg path {
+    fill: $color-red;
+  }
+}
+
+.caption {
+  @extend .small;
+  font-style: italic;
+}
