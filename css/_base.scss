@@ -26,6 +26,9 @@ p {
   font-size: 1rem;
   line-height: 1.5;
   margin: 15px 0 25px 0;
+ .wf-loading & {
+    visibility: hidden;
+  }  
 }
 
 a {
@@ -35,6 +38,9 @@ a {
   &:hover {
     text-decoration: underline;
     color: darken($color-red, 5%);
+  }
+  .wf-loading & {
+    visibility: hidden;
   }
 }
 
@@ -48,6 +54,9 @@ h4,
 .h4 {
   color: $color-main;
   font-weight: 900;
+  .wf-loading & {
+    visibility: hidden;
+  }
 }
 
 h1,
@@ -140,6 +149,10 @@ p code {
   padding: 2px 5px 0;
   color: $color-blue;
   border: 1px solid darken($grey-lt, 5%);
+}
+
+.text-center {
+  text-align: center;
 }
 
 img {
