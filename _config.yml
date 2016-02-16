@@ -1,9 +1,6 @@
 name: Nachiket Kumar
-markdown: redcarpet
-redcarpet:
-  extensions: ["strikethrough", "fenced_code_blocks"]
+markdown: kramdown
 highlighter: pygments
-pygments: true
 permalink: /writing/:title
 exclude: [Gemfile, Gemfile.lock, config.rb, s3_website.yml, .env]
 
