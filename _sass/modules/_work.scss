@@ -12,9 +12,8 @@
   }
 }
 
-.curri {
-  background: #415463;
-  background: linear-gradient(to bottom, #415463, darken(#415463, 4%));
+.helpcue,
+.bitpay {
   color: #fff;
   h2 {
     color: #fff;
@@ -27,6 +26,18 @@
       background: #fff;
     }
   }
+  .project-img {
+    box-shadow: 0 0 27px 1px rgba(0,0,0,0.6);
+  }
+}
+
+.helpcue {
+  background: #415463;
+  background: linear-gradient(to bottom, #415463, darken(#415463, 4%));
+}
+
+.bitpay {
+  background: #0e1c40;
 }
 
 .rimidi {
@@ -60,6 +71,12 @@
   width: 90%;
   display: block;
   margin: 0 auto;
+  .rimidi & {
+    box-shadow: 0 0 27px 1px rgba(0,0,0,0.3);
+    @include media-query(medium) {
+      width: 60%;
+    }
+  }
 }
 
 .blue {

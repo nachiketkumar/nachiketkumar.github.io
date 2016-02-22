@@ -27,10 +27,11 @@
         <div class="container">
           <div class="column">
             <a href="/" class="logo" title="Home">{% include logo.html %}</a>
+            {% assign current = page.url | downcase | split: '/' %}
             <ul class="nav">
-              <li class="navmenu"><a href="/work" class="navlinks">work</a></li>
-              <li class="navmenu"><a href="/process" class="navlinks">process</a></li>
-              <li class="navmenu"><a href="/writing" class="navlinks">Writing</a></li>
+              <li class="navmenu"><a href="/work" class="navlinks {% if current[1] == 'work' %}current{% endif %}">work</a></li>
+              <li class="navmenu"><a href="/process" class="navlinks {% if current[1] == 'process' %}current{% endif %}">process</a></li>
+              <li class="navmenu"><a href="/writing" class="navlinks {% if current[1] == 'writing' %}current{% endif %}">Writing</a></li>
             </ul>
           </div>
         </div>

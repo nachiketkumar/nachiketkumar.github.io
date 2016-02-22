@@ -25,7 +25,6 @@
 }
 
 .navmenu {
-  // float: left;
   display: inline-block;
   margin-bottom: 0;
   text-align: center;
@@ -43,5 +42,9 @@
   }
   @include media-query(medium) {
     padding: 10px 35px;
+  }
+  &.current {
+    color: $color-red;
+    cursor: default;
   }
 }

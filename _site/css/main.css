@@ -608,8 +608,8 @@ img {
 
 .row {
   padding-top: 20px; }
-  .row:nth-last-of-type(2) {
-    padding-bottom: 50px; }
+  .row:last-of-type {
+    padding-bottom: 30px; }
 
 .column,
 .half,
@@ -721,6 +721,9 @@ img {
   @media only screen and (min-width: 600px) {
     .navlinks, .accounts a {
       padding: 10px 35px; } }
+  .navlinks.current, .accounts a.current {
+    color: #EB4D6D;
+    cursor: default; }
 
 .profile {
   margin-top: 130px;
@@ -778,7 +781,7 @@ img {
     .accounts {
       border: none; } }
   .accounts li {
-    width: 32%;
+    width: 33.3%;
     float: left; }
   .accounts a {
     width: 44px;
@@ -863,18 +866,30 @@ img {
 @media only screen and (min-width: 600px) {
   .project {
     padding-top: 70px; } }
-.curri {
-  background: #415463;
-  background: linear-gradient(to bottom, #415463, #394a57);
+.helpcue,
+.bitpay {
   color: #fff; }
-  .curri h2 {
+  .helpcue h2,
+  .bitpay h2 {
     color: #fff; }
-  .curri .project-view {
+  .helpcue .project-view,
+  .bitpay .project-view {
     color: #fff;
     border: 2px solid #fff; }
-    .curri .project-view:hover {
+    .helpcue .project-view:hover,
+    .bitpay .project-view:hover {
       color: #415463;
       background: #fff; }
+  .helpcue .project-img,
+  .bitpay .project-img {
+    box-shadow: 0 0 27px 1px rgba(0, 0, 0, 0.6); }
+
+.helpcue {
+  background: #415463;
+  background: linear-gradient(to bottom, #415463, #394a57); }
+
+.bitpay {
+  background: #0e1c40; }
 
 .rimidi .project-view {
   color: #EB4D6D;
@@ -901,6 +916,11 @@ img {
   width: 90%;
   display: block;
   margin: 0 auto; }
+  .rimidi .project-img {
+    box-shadow: 0 0 27px 1px rgba(0, 0, 0, 0.3); }
+    @media only screen and (min-width: 600px) {
+      .rimidi .project-img {
+        width: 60%; } }
 
 .blue {
   color: #2A90B8; }
